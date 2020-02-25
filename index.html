@@ -1,18 +1,55 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <title>Gamedev Canvas Workshop</title>
     <style>
-    	* { padding: 0; margin: 0; }
-    	canvas { background: #eee; display: block; margin: 0 auto; }
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        canvas {
+            background: #eee;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        .food {
+            font-weight: bold;
+            padding: 8px;
+            float: left;
+        }
+        
+        .time {
+            font-weight: bold;
+            padding: 8px;
+            float: left;
+            ;
+        }
+        
+        .restart {
+            font-weight: bold;
+            padding: 8px;
+            float: right;
+            cursor: pointer;
+        }
     </style>
 </head>
+
 <body>
 
-<canvas id="myCanvas" width="720" height="560"></canvas>
+    <div style="text-align: center;width: 30%;margin: 0 auto;">
+        <div class="time">Time: <span id="countTime">0</span></div>
+        <div class="time">Score: <span id="countFood">0</span></div>
+        <div class="restart" onclick="restart()">Restart Game</div>
+    </div>
 
-<script src="snakeGame.js"></script>
+    <canvas id="myCanvas" width="720" height="560"></canvas>
+
+    <script src="snakeGame.js"></script>
 
 </body>
+
 </html>
