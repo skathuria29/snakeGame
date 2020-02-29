@@ -20,6 +20,8 @@ var head = "right";
 var isFoodEaten = true;
 var foodInterval;
 
+var totalFoodEatten = 0;
+
 function keyDownHandler(e) {
     if(e.key == "Right" || e.key == "ArrowRight") {
         head= "right";
@@ -71,6 +73,9 @@ function clearFood(){
     ctx.clearRect(foodx, foody, foodWidth, foodHeight);
     isFoodEaten = true;
     console.log("food eaten true");
+	
+    totalFoodEatten++;
+    document.getElementById("countFood").innerText = totalFoodEatten;
 }
 
 function increaseSnakeLength(){
